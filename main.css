@@ -326,6 +326,60 @@ body{
     width: 90%;
     aspect-ratio: 16/10;
 }
+.footer-background{
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    height: 160px;
+    background-color: #090909;
+    margin-top: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    max-width: 1080px;
+    height: 99%;
+    color: #f1f1f1;
+}
+.footer-section{
+    width: 35%;
+    max-height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.link-ngl{
+    width: 80%;
+    max-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link-ngl img{
+    width: 100%;
+}
+.footer-section-redes{
+    justify-content: space-evenly!important;
+}
+.link-redes{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link-redes img{
+    width: 100%;
+}
 @media all and (max-width: 1000px)
 {
     .banner-name{
@@ -333,6 +387,12 @@ body{
     }
 }
 @media all and (max-width: 720px){
+    .footer{
+        justify-content: center;
+    }
+    .footer-section{
+        width: 85%;
+    }
     .campeonatomain,.carreramain{
         width: 90%;}
     .menu-org{
