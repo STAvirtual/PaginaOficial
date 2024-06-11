@@ -69,7 +69,8 @@ body{
 }
 .img-auto-card{
     width: 90%;
-    aspect-ratio: 405/164;
+    aspect-ratio: 405/164!important;
+    height: auto;
 }
 .headersta{
     padding: 0!important;
