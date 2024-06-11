@@ -431,7 +431,7 @@ body{
     align-items: center;
 }
 
-.seccion-logos h4, .body-piloto h4{
+.seccion-logos h5, .body-piloto h5{
         border-radius: 20px;
         line-height: 2em;
         text-align: center;
@@ -442,7 +442,7 @@ body{
         margin-top: 20px;
         font-weight: 400;
 }
-.seccion-logos h4{
+.seccion-logos h5{
     width: 100%;
 }
 
