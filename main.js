@@ -5,8 +5,7 @@ menubtn.addEventListener('click',function(){if (menudesplegable.classList.contai
 
 
 const storeOpening = new Date('jun 30, 2024 14:00:00');
-
-setCountdown(storeOpening);
+setInterval ('setCountdown(storeOpening)', 1000);
 
 function setCountdown(countingDownTime) {
 
@@ -14,8 +13,7 @@ function setCountdown(countingDownTime) {
 
     let timeRemaining = countingDownTime - now;
 
-    console.log(timeRemaining);
-
+    console.log(timeRemaining)
     // Seconds
     let seconds = Math.floor(timeRemaining / 1000);
     // Minutes

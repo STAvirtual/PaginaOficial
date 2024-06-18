@@ -481,10 +481,14 @@ body{
     overflow: none;
 }
 #countdown {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
     font-size: 25px;
     text-align: center; 
     margin: 10px;
-    max-width: 400px;
+    width: 350px;
+    max-width: 100%;
     overflow: none;
     color: #e7e7e7;
 }
