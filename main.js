@@ -4,7 +4,7 @@ const menudesplegable = document.getElementById('menu-desplegable-sta')
 menubtn.addEventListener('click',function(){if (menudesplegable.classList.contains("menu-desplegado")){menudesplegable.classList.remove("menu-desplegado")}else{menudesplegable.classList.add("menu-desplegado")}})
 
 
-const storeOpening = new Date('jul 07, 2024 22:00:00');
+const storeOpening = new Date('jul 29, 2024 19:00:00');
 setInterval ('setCountdown(storeOpening)', 1000);
 
 function setCountdown(countingDownTime) {
