@@ -178,6 +178,9 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.anular-margin{
+    margin: 0px!important;
+}
 .banner-next-circuit{
     display: flex;
     flex-wrap: wrap;
