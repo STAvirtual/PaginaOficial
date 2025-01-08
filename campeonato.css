@@ -23,6 +23,42 @@
     margin: 1px 0px;
     padding: 2px;
     justify-content: center;
+    background-color: #fafafa;
+}
+.tablaPilotoLoading{
+    width: 100%;
+    border: 1px solid black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 1px 0px;
+    padding: 2px;
+    justify-content: center;
+    animation: 900ms infinite linear color-loading;
+}
+
+@keyframes color-loading {
+    0% {
+        background: linear-gradient(
+            to right,
+            #fafafa,
+            #c7c7c9
+        );
+    }
+    50%{background: linear-gradient(
+        to right,
+        #fafafa,
+        #c7c7c9,
+        #fafafa
+    );
+}
+    100% {
+        background: linear-gradient(
+            to right,
+            #c7c7c9,
+            #fafafa
+        );
+    }
 }
 .nombrePilotoTabla{
     font-size: 30px;

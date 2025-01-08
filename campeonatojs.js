@@ -33,5 +33,6 @@ function mostrarPilotos(piloto) {
                             <p class="ptsPilotoTabla">${piloto.PUNTOS} PTS</p>
                             `
   tablaCampeonato.appendChild(tarjetaPiloto);
+  campeonatomain.innerHTML = ''
   campeonatomain.appendChild(tablaCampeonato)
 }
