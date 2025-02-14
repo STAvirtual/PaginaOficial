@@ -16,6 +16,23 @@ function mostrarCampeonato(pilotos) {
   pilotos.sort((a, b) => a.POS - b.POS)
   pilotos.forEach((piloto) => {
     mostrarPilotos(piloto);});
+  pintarcopadeoro()
+}
+function verposicion(piloto){
+  console.log(piloto)
+  let pilotoposicion = piloto.querySelector('.posPilotoTabla')
+  console.log(pilotoposicion)
+  let pilotoapintar = pilotoposicion.closest('.tablaPiloto')
+  let posicionvalor = pilotoposicion.textContent
+  console.log(posicionvalor)
+  if (posicionvalor <= 8) {
+    pilotoapintar.classList.add("copadeoroclasificando")
+}
+}
+function pintarcopadeoro(){
+    let pilotosyalistados = document.querySelectorAll(".tablaPiloto")
+    pilotosyalistados.forEach((piloto) => 
+      verposicion(piloto))
 }
 
 const tablaCampeonato = document.createElement("section")

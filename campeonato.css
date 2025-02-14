@@ -36,6 +36,9 @@
     justify-content: center;
     animation: 900ms infinite linear color-loading;
 }
+.copadeoroclasificando{
+    background-color: #dad889;
+}
 
 @keyframes color-loading {
     0% {
