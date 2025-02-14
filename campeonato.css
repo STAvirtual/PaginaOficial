@@ -6,6 +6,9 @@
     background-size: cover;
     background-position: center;
 }
+.banner-PCK{
+    background-image: url(./assets/portada-campeonato-pck.jpg)!important
+}
 .tablaPosiciones{
     margin-top: 20px;
     width: fit-content;
@@ -92,6 +95,9 @@
     margin-right: 20px;
     margin-bottom: 0;
     text-align: end;
+}
+.colorpckp{
+    color: #e2215c!important;
 }
 @media all and (max-width: 985px){
     .tablaPosiciones{
