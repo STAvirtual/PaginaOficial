@@ -5,6 +5,14 @@ menubtn.addEventListener('click',function(){if (menudesplegable.classList.contai
 
 
 importarCampeonato()
+
+importarCampeonatoEquipos()
+function importarCampeonatoEquipos() {
+  fetch('https://script.google.com/macros/s/AKfycbyWVmddF2MV6z4shFVxYaoPVl-Gaj0MdWk2wu5PBqJNlayJ91NTawYWlLapz2q1GvRHeA/exec', { cache: 'no-store' },{"method":"GET"})
+    .then((response) => response.json())
+    .then((json) => mostrarCampeonatoEquipo(json))
+    .then()
+}
   
 function importarCampeonato() {
       fetch('https://script.google.com/macros/s/AKfycbyXTuiZSR5W0zg8zv-wjONCheMXfX9ymCyAAuPty8NA6FWVxAjHddeAgBdTetu_49PN/exec', { cache: 'no-store' },{"method":"GET"})
@@ -52,4 +60,29 @@ function mostrarPilotos(piloto) {
   tablaCampeonato.appendChild(tarjetaPiloto);
   campeonatomain.innerHTML = ''
   campeonatomain.appendChild(tablaCampeonato)
+}
+
+function mostrarCampeonatoEquipo(equipos) {//
+  equipos.sort((a, b) => a.POS - b.POS)
+  equipos.forEach((equipo) => {
+    mostrarEquipos(equipo);});
+}
+
+const tablaCampeonatoEquipos = document.createElement("section")
+  tablaCampeonatoEquipos.className = "tablaPosiciones"
+function mostrarEquipos(equipo) {
+  const campeonatoequiposmain = document.getElementById("campeonato-equipos-main");
+  
+  const tarjetaPiloto = document.createElement("div");
+  
+  tarjetaPiloto.className += "tablaPiloto";
+  tarjetaPiloto.innerHTML = `<p class="posPilotoTabla colorpckp">${equipo.POS}</p>
+                            <article class="imgPilotoTabla"><img src="./assets/equipos2025/${equipo.AUTO}.png" alt="${equipo.PILOTO}"></article>
+                            <p class="nombrePilotoTabla">${equipo.PILOTO}</p>
+                            <article class="imgPilotoTabla"><img src="./assets/equipos2025/${equipo.EQUIPO}.png" alt="${equipo.PILOTO}"></article>
+                            <p class="ptsPilotoTabla colorpckp">${equipo.PUNTOS} PTS</p>
+                            `
+  tablaCampeonatoEquipos.appendChild(tarjetaPiloto);
+  campeonatoequiposmain.innerHTML = ''
+  campeonatoequiposmain.appendChild(tablaCampeonatoEquipos)
 }
