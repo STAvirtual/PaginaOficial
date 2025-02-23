@@ -76,11 +76,11 @@ function mostrarEquipos(equipo) {
   const tarjetaPiloto = document.createElement("div");
   
   tarjetaPiloto.className += "tablaPiloto";
-  tarjetaPiloto.innerHTML = `<p class="posPilotoTabla colorpckp">${equipo.POS}</p>
+  tarjetaPiloto.innerHTML = `<p class="posPilotoTabla">${equipo.POS}</p>
                             <article class="imgPilotoTabla"><img src="./assets/equipos2025/${equipo.AUTO}.png" alt="${equipo.PILOTO}"></article>
                             <p class="nombrePilotoTabla">${equipo.PILOTO}</p>
                             <article class="imgPilotoTabla"><img src="./assets/equipos2025/${equipo.EQUIPO}.png" alt="${equipo.PILOTO}"></article>
-                            <p class="ptsPilotoTabla colorpckp">${equipo.PUNTOS} PTS</p>
+                            <p class="ptsPilotoTabla">${equipo.PUNTOS} PTS</p>
                             `
   tablaCampeonatoEquipos.appendChild(tarjetaPiloto);
   campeonatoequiposmain.innerHTML = ''

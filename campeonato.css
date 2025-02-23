@@ -1,7 +1,10 @@
+.nullMarginTop{
+ margin-top: 0;
+}
 .banner-campeonatoSTA{
     margin-top: 40px;
     width: 100%;
-    aspect-ratio: 1600/250;
+    aspect-ratio: 1600/400;
     background-image: url(./assets/portada-campeonato-sta.jpg);
     background-size: cover;
     background-position: center;
