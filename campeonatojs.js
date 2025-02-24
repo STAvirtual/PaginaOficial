@@ -33,12 +33,12 @@ function verposicion(piloto){
   let pilotoapintar = pilotoposicion.closest('.tablaPiloto')
   let posicionvalor = pilotoposicion.textContent
 
-  if (posicionvalor <= 8) {
+  if (posicionvalor <= 5) {
     pilotoapintar.classList.add("copadeoroclasificando")
 }
 }
 function pintarcopadeoro(){
-    let pilotosyalistados = document.querySelectorAll(".tablaPiloto")
+    let pilotosyalistados = document.querySelectorAll(".queryPilotos")
     pilotosyalistados.forEach((piloto) => 
       verposicion(piloto))
 }
@@ -47,10 +47,11 @@ const tablaCampeonato = document.createElement("section")
   tablaCampeonato.className = "tablaPosiciones"
 function mostrarPilotos(piloto) {
   const campeonatomain = document.getElementById("campeonato-main");
-  
+  const mensajeCopadeOro = document.createElement("p")
+  mensajeCopadeOro.innerText = ("*Los pilotos en dorado se encuentran clasificando a la Copa de Oro")
   const tarjetaPiloto = document.createElement("div");
   
-  tarjetaPiloto.className += "tablaPiloto";
+  tarjetaPiloto.className += "tablaPiloto queryPilotos";
   tarjetaPiloto.innerHTML = `<p class="posPilotoTabla">${piloto.POS}</p>
                             <article class="imgPilotoTabla"><img src="./assets/autos2025/${piloto.AUTO}.png" alt="${piloto.PILOTO}"></article>
                             <p class="nombrePilotoTabla">${piloto.PILOTO}</p>
@@ -60,6 +61,7 @@ function mostrarPilotos(piloto) {
   tablaCampeonato.appendChild(tarjetaPiloto);
   campeonatomain.innerHTML = ''
   campeonatomain.appendChild(tablaCampeonato)
+  campeonatomain.appendChild(mensajeCopadeOro)
 }
 
 function mostrarCampeonatoEquipo(equipos) {//
@@ -84,5 +86,6 @@ function mostrarEquipos(equipo) {
                             `
   tablaCampeonatoEquipos.appendChild(tarjetaPiloto);
   campeonatoequiposmain.innerHTML = ''
+
   campeonatoequiposmain.appendChild(tablaCampeonatoEquipos)
 }
