@@ -102,6 +102,9 @@
 .colorpckp{
     color: #e2215c!important;
 }
+.colorAPVA{
+    color: #60b0e5!important;
+}
 @media all and (max-width: 985px){
     .tablaPosiciones{
         width: 100%;
