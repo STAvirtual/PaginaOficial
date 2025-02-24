@@ -74,6 +74,9 @@
     margin: 0;
     width: 45%;
 }
+.nombrePilotoTablaTemporadasAnteriores{
+    width: 60%;
+}
 .imgPilotoTabla{
     margin-right: 30px;
     height: 100%;
