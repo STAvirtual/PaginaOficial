@@ -28,8 +28,9 @@
     align-items: center;
     margin: 1px 0px;
     padding: 2px;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #fafafa;
+    overflow: hidden;
 }
 .tablaPilotoLoading{
     width: 100%;
@@ -72,7 +73,8 @@
 .nombrePilotoTabla{
     font-size: 30px;
     margin: 0;
-    width: 45%;
+    width: 48%;
+    text-align: start;
 }
 .nombrePilotoTablaTemporadasAnteriores{
     width: 60%;
@@ -99,6 +101,7 @@
     color: #ff5401;
     font-size: 30px;
     margin-right: 20px;
+    width: 16%;
     margin-bottom: 0;
     text-align: end;
 }
@@ -157,12 +160,12 @@
         margin-right: 5px;
     }
 }
-@media all and (max-width: 370px){
+@media all and (max-width: 380px){
     .tablaPiloto{
         height: 25px;
     }
     p{
-        font-size: 15px!important;
+        font-size: 12px!important;
     }
     .nombrePilotoTabla{
         margin: 0;
