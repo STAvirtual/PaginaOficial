@@ -12,6 +12,9 @@
 .banner-PCK{
     background-image: url(./assets/portada-campeonato-pck.jpg)!important
 }
+.banner-campeones{
+    background-image: url(./assets/portada-campeones.jpg)!important
+}
 .tablaPosiciones{
     margin-top: 20px;
     width: fit-content;
