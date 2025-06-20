@@ -5,6 +5,7 @@ menubtn.addEventListener('click',function(){if (menudesplegable.classList.contai
 
 
 importarCampeonato()
+importarCopa()
 
 importarCampeonatoEquipos()
 function importarCampeonatoEquipos() {
@@ -12,6 +13,13 @@ function importarCampeonatoEquipos() {
     .then((response) => response.json())
     .then((json) => mostrarCampeonatoEquipo(json))
     .then()
+}
+
+function importarCopa() {
+      fetch('https://script.google.com/macros/s/AKfycbxuxrVK9N9gBxgiojro01DpaGrb8YUp4Sy5d5lRCuxY5j6vwMR9kc03Wo1J7GzvMRXSUg/exec', { cache: 'no-store' },{"method":"GET"})
+        .then((response) => response.json())
+        .then((json) => mostrarCopa(json))
+        .then()
 }
   
 function importarCampeonato() {
@@ -24,7 +32,19 @@ function mostrarCampeonato(pilotos) {
   pilotos.sort((a, b) => a.POS - b.POS)
   pilotos.forEach((piloto) => {
     mostrarPilotos(piloto);});
-  pintarcopadeoro()
+// pintarcopadeoro()
+}
+
+function mostrarCopa(pilotosC) {
+  pilotosC.sort((a, b) => a.POS - b.POS)
+  pilotosC.forEach((pilotoc) => {
+    mostrarPilotosCopa(pilotoc);});
+}
+
+function mostrarCampeonatoEquipo(equipos) {//
+  equipos.sort((a, b) => a.POS - b.POS)
+  equipos.forEach((equipo) => {
+    mostrarEquipos(equipo);});
 }
 function verposicion(piloto){
 
@@ -37,11 +57,7 @@ function verposicion(piloto){
     pilotoapintar.classList.add("copadeoroclasificando")
 }
 }
-function pintarcopadeoro(){
-    let pilotosyalistados = document.querySelectorAll(".queryPilotos")
-    pilotosyalistados.forEach((piloto) => 
-      verposicion(piloto))
-}
+
 
 const tablaCampeonato = document.createElement("section")
   tablaCampeonato.className = "tablaPosiciones"
@@ -64,11 +80,28 @@ function mostrarPilotos(piloto) {
   campeonatomain.appendChild(mensajeCopadeOro)
 }
 
-function mostrarCampeonatoEquipo(equipos) {//
-  equipos.sort((a, b) => a.POS - b.POS)
-  equipos.forEach((equipo) => {
-    mostrarEquipos(equipo);});
+const tablaCopa = document.createElement("section")
+  tablaCopa.className = "tablaPosiciones"
+function mostrarPilotosCopa(piloto) {
+  const copamain = document.getElementById("copa-main");
+  const mensajeCopadeOro = document.createElement("p")
+  mensajeCopadeOro.innerText = ("*Los pilotos en dorado se encuentran clasificando a la Copa de Oro")
+  const tarjetaPiloto = document.createElement("div");
+  
+  tarjetaPiloto.className += "tablaPiloto queryPilotos";
+  tarjetaPiloto.innerHTML = `<p class="posPilotoTabla">${piloto.POS}</p>
+                            <article class="imgPilotoTabla"><img src="./assets/autos2025/${piloto.AUTO}.png" alt="${piloto.PILOTO}"></article>
+                            <p class="nombrePilotoTabla">${piloto.PILOTO}</p>
+                            <article class="imgPilotoTabla"><img src="./assets/equipos2025/${piloto.EQUIPO}.png" alt="${piloto.PILOTO}"></article>
+                            <p class="ptsPilotoTabla">${piloto.PUNTOS} PTS</p>
+                            `
+  tablaCopa.appendChild(tarjetaPiloto);
+  copamain.innerHTML = ''
+  copamain.appendChild(tablaCopa)
 }
+
+
+
 
 const tablaCampeonatoEquipos = document.createElement("section")
   tablaCampeonatoEquipos.className = "tablaPosiciones"
@@ -89,3 +122,4 @@ function mostrarEquipos(equipo) {
 
   campeonatoequiposmain.appendChild(tablaCampeonatoEquipos)
 }
+
