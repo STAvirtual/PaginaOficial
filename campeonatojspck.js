@@ -37,9 +37,9 @@ function mostrarPilotos(piloto) {
   
   tarjetaPiloto.className += "tablaPiloto";
   tarjetaPiloto.innerHTML = `<p class="posPilotoTabla colorpckp">${piloto.POS}</p>
-                            <article class="imgPilotoTabla"><img src="./assets/camionetas2025/${piloto.AUTO}.png" alt="${piloto.PILOTO}"></article>
+                            <article class="imgPilotoTabla"><img src="./assets/gt2025/${piloto.AUTO}.png" alt="${piloto.PILOTO}"></article>
                             <p class="nombrePilotoTabla">${piloto.PILOTO}</p>
-                            <article class="imgPilotoTabla"><img src="./assets/equipos2025/${piloto.EQUIPO}.png" alt="${piloto.PILOTO}"></article>
+                            <article class="imgPilotoTabla"><img src="./assets/gt2025/${piloto.EQUIPO}.png" alt="${piloto.PILOTO}"></article>
                             <p class="ptsPilotoTabla colorpckp">${piloto.PUNTOS} PTS</p>
                             `
   tablaCampeonato.appendChild(tarjetaPiloto);
@@ -63,9 +63,9 @@ function mostrarEquipos(equipo) {
   
   tarjetaPiloto.className += "tablaPiloto";
   tarjetaPiloto.innerHTML = `<p class="posPilotoTabla colorpckp">${equipo.POS}</p>
-                            <article class="imgPilotoTabla"><img src="./assets/equipos2025/${equipo.AUTO}.png" alt="${equipo.PILOTO}"></article>
+                            <article class="imgPilotoTabla"><img src="./assets/gt2025/${equipo.AUTO}.png" alt="${equipo.PILOTO}"></article>
                             <p class="nombrePilotoTabla">${equipo.PILOTO}</p>
-                            <article class="imgPilotoTabla"><img src="./assets/equipos2025/${equipo.EQUIPO}.png" alt="${equipo.PILOTO}"></article>
+                            <article class="imgPilotoTabla"><img src="./assets/gt2025/${equipo.EQUIPO}.png" alt="${equipo.PILOTO}"></article>
                             <p class="ptsPilotoTabla colorpckp">${equipo.PUNTOS} PTS</p>
                             `
   tablaCampeonatoEquipos.appendChild(tarjetaPiloto);
