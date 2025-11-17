@@ -1,601 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 *{
+    font-family: Orbitron!important;
     padding: 0;
     margin: 0;
-    font-family: Oswald, sans-serif;
 }
-body{
-    background-color: #f1f1f1;
-    font-size: 22px;
-    font-weight: 400;
-}
-.pilotos-body{
+.banner-campeonato-equipos{
+    margin-top: 20px;
+    margin-bottom: 10px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
+    padding-right: 15px;
+    padding-left: 15px;
     width: 100%;
-    flex-wrap: wrap;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    height: 99%;
+    color: #000000;
 }
-.piloto-tarjeta,.calendario-tarjeta{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 450px;
-    max-width: 95%;
-    height: 250px;
-    background-color: #131b21;
-    background-image: url(./assets/tarjetapilotos.png);
-    text-decoration: none;
-    color: #ffffff;
-    transition: ease-in .5s;
-    border-radius: 20px;
-    box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.54);
-    -webkit-box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.54);
-    -moz-box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.54);
-    margin-bottom: 20px;
-}
-.calendario-tarjeta{
-    font-size: 22px;
-    background-image: url(./assets/tarjetacircuitos.png);
-}
-.tarjeta-carrera-terminada{
-    background-image: url(./assets/carrera-terminada.png);
-}
-
-.piloto-tarjeta:hover,.calendario-tarjeta:hover{
-    transform: scale(1.05);
-}
-.calendario-tarjeta .img-circuito{
-    width: 50%;
-    aspect-ratio: 1/1;
-}
-.calendario-tarjeta section{
-    padding-right: 20px;
+.banner-portada{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    width: 50%;
-}
-.piloto-tarjeta section{
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
     flex-wrap: wrap;
-    width: 90%;
-}
-.piloto-tarjeta section img{
-    width: 20%;
-    height: fit-content;
-}
-.piloto-tarjeta h3{
-    font-size: 38px;
-}
-.img-auto-card{
-    width: 90%;
-    aspect-ratio: 405/164!important;
-    height: auto;
-}
-.headersta{
-    padding: 0!important;
-    margin: 0!important;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #17242d;
-    box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.54);
-    -webkit-box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.54);
-    -moz-box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.54);
-    z-index: 10000;
-}
-.headersta div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
-    max-width: 1080px;
-    height: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
+    height: 100vh;
+    color: aliceblue;
+    padding: 50px;
 }
-.headersta div a, .headersta div a img{
-    height: 90%;
-}
-.img-campeonato{
-    width: 95%;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-}
-#button-menu-sta{
-    height: 100%;
-    aspect-ratio: 1/1;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    background-image: url(./assets/menu-icon.png);
-    background-size: 100%;
+.banner-portada img{
+    width: 60%;
+    max-width: 610px;
 }
 
-#menu-desplegable-sta{
-    position: fixed;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: #e7e7e7;
-    box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.54);
-    -webkit-box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.54);
-    -moz-box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.54);
-    transition: all .7s;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-.menu-org{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
-    max-width: 1080px;
-}
-.menu-org a{
-    text-decoration: none;
-    display: inline;
-    font-size: 30px;
-    color: #090909;
-    border-bottom: 4px solid transparent;
-    transition: all .7s;
-}
-.menu-org a:hover{
-    border-color: #60b0e5;
-}
-.menu-desplegado{
-    top: 60px!important;
-}
-.banner-next-circuit-background{
+.seccion-tablas-campeonato{
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    min-width: 100%;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    /*height: 160px;*/
-    background-color: #090909;
-    margin-top: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.anular-margin{
-    margin: 0px!important;
-}
-.banner-next-circuit{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%;
-    max-width: 1080px;
-    height: 99%;
-    color: #f1f1f1;
-}
-.banner-date{
-    width: 100%;
-    height: 20%;
-    text-align: center;
-}
-.banner-section{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-    /*padding-left: 30px;
-    padding-right: 30px;*/
-}
-.banner-name{
-    font-size: 60px;
-    margin-left: 20px;
-}
-.img-banner{
-    height: 100%;
-    margin-right: 20px;
-    margin-top: -15px;
-}
-.main-body{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
-    min-height: 1vh;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 1080px;
-    background-color: #f7f7f7;
-    padding-top: 20px;
-}
-.carrouselsta{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    overflow: hidden;
-}
-.carousel{
-    border-radius: 20px;
-    overflow: hidden;
-    width: 90%;
-}
-.carrouselsta p{
-    border-radius: 20px;
-    line-height: 2em;
-    text-align: center;
-    background-color: #090909;
-    color: #60b0e5;
-    font-size: 30px;
-    width: 90%;
-}
-.resultadosmain{
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.campeonatomain,.carreramain{
+.tablaindex{
+    margin-top: 40px;
+}
+
+.seccion-tempordas-anteriores{
+    margin-top: 100px!important;
     display: flex;
     flex-wrap: wrap;
-    border-radius: 20px;
-    width: 42%;
-    height: 500px;
-    background-color: #f1f1f1;
-    align-items: center;
-    justify-content: center;
-}
-.campeonatomain .headercampeonatomain ,.carreramain .headercampeonatomain{
-    border-radius: 20px;
-    line-height: 2em;
-    text-align: center;
-    background-color: #090909;
-    color: #60b0e5;
-    font-size: 30px;
-    width: 98%;
-    text-decoration: none;
-}
-.campeonatomain div{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    width: 98%;
-    height: 70px;
-    background-color: #e7e7e7;
-    overflow: hidden;
-}
-.campeonatomain div img{
-    width: 25%;
-}
-.posicion{
-    text-align: center;
-    align-self: center;
-    margin-top: 20px;
-    background-color: #60b0e5;
-    color: #090909;
-    height: 100%;
-    font-size: 40px;
-    padding-right: 20px;
-    padding-left: 10px;
-    width: 10%;
-}
-.pts{
-    margin-right: 0;
-    width: 19%;
-}
-.nombrecampeonato{
-    width: 35%;
-    text-align: start;
-    padding-top: 9px;
-}
-.carreramain div{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    width: 98%;
-    height: 30px;
-    background-color: #e7e7e7;
-    overflow: hidden;
-}
-.carreramain div img{
-    height: 98%;
-}
-.carreramain p{
-    font-size: 20px;
-}
-.carreramain .nombrecampeonato{
-    width: 75%;
-    height: 100%;
-}
-.videocarreramain{
-    width: 90%;
-    aspect-ratio: 16/10;
-}
-.footer-background{
     width: 100%;
-    min-width: 100%;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    height: 160px;
-    background-color: #090909;
-    margin-top: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.footer{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%;
+    justify-content: space-evenly;
     max-width: 1080px;
-    height: 99%;
-    color: #f1f1f1;
+    margin: auto
 }
-.footer-section{
-    width: 35%;
-    max-height: 80%;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.card{
+    margin-top: 20px!important;
 }
-.link-ngl{
-    width: 80%;
-    max-width: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.link-ngl img{
-    width: 100%;
-}
-.footer-section-redes{
-    justify-content: space-evenly!important;
-}
-.link-redes{
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.link-redes img{
-    width: 100%;
-}
-.body-piloto{
+
+.portada-paginas{
     margin-top: 80px;
     display: flex;
-    width: 98%;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-}
-.body-auto-piloto{
-    width: 100%;
-}
-.body-piloto h2{
-    font-size: 60px;
-    width: 98%;
-    text-align: center;
-    margin-bottom: 25px;
-}
-.info-piloto{
-    width: 45%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.info-piloto li{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    font-size: 30px;
-    color: #090909;
-}
-.info-piloto li:hover{
-    color: #60b0e5;
-}
-.info-piloto h4{
-    width: 80%;
-}
-.info-piloto p{
-    width: 20%;
-}
-.seccion-logos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 90%;
     align-items: center;
-}
-
-.seccion-logos h5, .body-piloto h5{
-        border-radius: 20px;
-        line-height: 2em;
-        text-align: center;
-        background-color: #090909;
-        color: #60b0e5;
-        font-size: 30px;
-        width: 90%;
-        margin-top: 20px;
-        font-weight: 400;
-}
-.seccion-logos h5{
-    width: 100%;
-}
-
-.body-piloto-numero{
-    width: 35%;
-}
-.final-img{
-    width: 90%;
-}
-.qualy-img{
-    width: 65%;
-    height: auto;
-}
-.trazado-img{
-    width: 30%;
-    aspect-ratio: 1/1;
-}
-.carrera-terminada{
-    position:inherit;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 50%;
-    z-index: 10;
-}
-.banner-countdown{
-    width: 100%;
-    min-width: 100%;
-    display: flex;
-    align-items: top;
     justify-content: center;
-    height: 170px;
-    background-color: #090909;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    overflow: none;
-}
-#countdown {
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    font-size: 25px;
-    text-align: center; 
-    margin: 10px;
-    width: 350px;
-    max-width: 100%;
-    overflow: none;
-    color: #e7e7e7;
-}
-#countdown-timer span {
-    display: inline-block; /* Necessary to set a width */
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0.5rem;
-    border: 3px #60b0e5 solid;
-    border-radius: 20px;
-}
-.body-campeones{
-    display: flex;
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    height: 40vh;
+    color: aliceblue;
+    padding: 50px;
 }
-@media all and (max-width: 1000px)
-{
-    .banner-name{
-        font-size: 40px;
-    }
+.card{
+    transition: 0.3s ease-in-out
 }
-@media all and (max-width: 720px){
-    .footer{
-        justify-content: center;
-    }
-    .footer-section{
-        width: 85%;
-    }
-    .campeonatomain,.carreramain{
-        width: 90%;}
-    .menu-org{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 1080px;
-    }
-    .menu-org a{
-        margin-bottom: 20px;
-        border-color: rgba(0,0,0,0.54);
-    }
-    .info-piloto li{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        font-size: 20px;
-        color: #090909;
-    }
-    .info-piloto{
-        width: 90%;
-    }
-    .body-piloto h2{
-        font-size: 45px;
-    }
-}
-@media all and (max-width: 550px){
-    .calendario-tarjeta{
-        font-size: 18px;
-    }
-    .banner-date{
-        font-size: 15px;
-    }
-    .banner-name{
-        font-size: 25px;
-    }
-    .campeonatomain .posicion{
-        text-align: center;
-        align-self: center;
-        margin-top: 20px;
-        padding-top: 20px;
-        background-color: #60b0e5;
-        color: #090909;
-        height: 100%;
-        font-size: 20px;
-        padding-right: 25px;
-        padding-left: 10px;
-        width: 10%;
-    }
-    .campeonatomain .nombrecampeonato{
-        padding-top: 20px;
-        font-size: 20px;
-    }
-    .carrouselsta p{
-        font-size: 25px;
-    }
-    .piloto-tarjeta h3{
-        font-size: 28px;
-    }
-    .info-piloto li{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        font-size: 16px;
-        color: #090909;
-    }
-    .body-piloto h2{
-        font-size: 28px;
-    }
+.card:hover{
+    scale: 1.01!important;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
