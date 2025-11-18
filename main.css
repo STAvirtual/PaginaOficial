@@ -60,6 +60,7 @@
     max-width: 1080px;
     margin: auto;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 .card{
     margin-top: 20px!important;
