@@ -61,7 +61,7 @@ function mostrarPilotos(piloto) {
   tarjetaPiloto.className += "tablaPiloto queryPilotos";
   tarjetaPiloto.innerHTML = `<th class="posPilotoTabla">${piloto.POS}</th>
                             <td class="nombrePilotoTabla">${piloto.PILOTO}</td>
-                            <td ><img src="./assets/autos2025/${piloto.AUTO}.png" alt="${piloto.PILOTO}" style="max-height: 100%; height: 30px;"></td>
+                            <td ><img src="./assets/sta2026/${piloto.AUTO}.png" alt="${piloto.PILOTO}" style="max-height: 100%; height: 30px;"></td>
                             <th class="ptsPilotoTabla">${piloto.PUNTOS} PTS</th>
                             `
   tablaCampeonato.appendChild(tarjetaPiloto);

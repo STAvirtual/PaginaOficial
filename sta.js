@@ -45,9 +45,9 @@ function mostrarPilotos(piloto) {
                             `
   tarjetaPiloto.className += "tablaPiloto queryPilotos";
   tarjetaPiloto.innerHTML = `<th class="posPilotoTabla">${piloto.POS}</th>
-                            <td ><img src="./assets/autos2025/${piloto.AUTO}.png" alt="${piloto.PILOTO}" style="max-height: 100%; height: 30px;"></td>
+                            <td ><img src="./assets/sta2026/${piloto.AUTO}.png" alt="${piloto.PILOTO}" style="max-height: 100%; height: 30px;"></td>
                             <td class="nombrePilotoTabla">${piloto.PILOTO}</td>
-                            <td ><img src="./assets/equipos2025/${piloto.EQUIPO}.png" alt="${piloto.PILOTO}" style="max-height: 100%; height: 30px;"></td>
+                            <td ><img src="./assets/sta2026/${piloto.EQUIPO}.png" alt="${piloto.PILOTO}" style="max-height: 100%; height: 30px;"></td>
                             <th class="ptsPilotoTabla">${piloto.PUNTOS} PTS</th>
                             `
   tablaCampeonato.appendChild(tarjetaPiloto);
@@ -74,9 +74,9 @@ function mostrarEquipos(equipo) {
                             `
   tarjetaPiloto.className += "tablaPiloto";
   tarjetaPiloto.innerHTML = `<th class="posPilotoTabla">${equipo.POS}</th>
-                            <td class="imgPilotoTabla"><img src="./assets/equipos2025/${equipo.EQUIPO}.png" alt="${equipo.PILOTO}" style="max-height: 100%; height: 30px;"></td>
+                            <td class="imgPilotoTabla"><img src="./assets/sta2026/${equipo.EQUIPO}.png" alt="${equipo.PILOTO}" style="max-height: 100%; height: 30px;"></td>
                             <td class="nombrePilotoTabla">${equipo.PILOTO}</td>
-                            <td class="imgPilotoTabla"><img src="./assets/equipos2025/${equipo.AUTO}.png" alt="${equipo.PILOTO}" style="max-height: 100%; height: 30px;"></td>
+                            <td class="imgPilotoTabla"><img src="./assets/sta2026/${equipo.AUTO}.png" alt="${equipo.PILOTO}" style="max-height: 100%; height: 30px;"></td>
                             <th class="ptsPilotoTabla">${equipo.PUNTOS} PTS</th>
                             `
   tablaCampeonatoEquipos.appendChild(tarjetaPiloto);
